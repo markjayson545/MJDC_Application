@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MJDC_Application</string>
+    <string name="result">Result</string>
+    <string name="addition">+</string>
+    <string name="subtraction">-</string>
+    <string name="multiplication">*</string>
+    <string name="division">/</string>
 </resources>

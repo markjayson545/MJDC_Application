@@ -1,17 +1,24 @@
 package com.markjayson545.mjdc_application
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.RadioGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+
+    val calcAllPlaceholder = "Sum of ___ and ___ is: ___\n" +
+            "Difference of ___ and ___ is: ___\n" +
+            "Quotient of ___ and ___ is: ___\n" +
+            "Product of ___ and ___ is: ___\n" +
+            "Modulo of ___ and ___ is: ___\n"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,46 +31,111 @@ class MainActivity : AppCompatActivity() {
 
         var selectedOperation = ""
 
-        findViewById<RadioGroup>(R.id.operationRadioGroup).setOnCheckedChangeListener { _, checkedId ->
-            when (checkedId) {
-                R.id.additionRadio -> selectedOperation = "addition"
-                R.id.subtractionRadio -> selectedOperation = "subtraction"
-                R.id.multiplicationRadio -> selectedOperation = "multiplication"
-                R.id.divisionRadio -> selectedOperation = "division"
-            }
+        findViewById<Button>(R.id.additionBtn).setOnClickListener {
+            selectedOperation = "add"
+            displayResult(selectedOperation)
+            selectedOperation = ""
         }
 
-        findViewById<Button>(R.id.button).setOnClickListener {
-            if (selectedOperation != ""){
-                displayResult(selectedOperation)
-            } else {
-                Toast.makeText(this, "Please select an operation", Toast.LENGTH_SHORT).show()
-            }
+        findViewById<Button>(R.id.subtractBtn).setOnClickListener {
+            selectedOperation = "sub"
+            displayResult(selectedOperation)
+            selectedOperation = ""
         }
 
+        findViewById<Button>(R.id.divideBtn).setOnClickListener {
+            selectedOperation = "div"
+            displayResult(selectedOperation)
+            selectedOperation = ""
+        }
+
+        findViewById<Button>(R.id.multiplyBtn).setOnClickListener {
+            selectedOperation = "mul"
+            displayResult(selectedOperation)
+            selectedOperation = ""
+        }
+
+        findViewById<Button>(R.id.moduloBtn).setOnClickListener {
+            selectedOperation = "mod"
+            displayResult(selectedOperation)
+            selectedOperation = ""
+        }
+
+        findViewById<Button>(R.id.clearInputs).setOnClickListener {
+            clearInputs()
+        }
+
+        findViewById<Button>(R.id.calculateAllBtn).setOnClickListener {
+            calculateAll()
+        }
+
+
+        findViewById<TextView>(R.id.calcAllResult).text = calcAllPlaceholder
 
     }
 
-    fun displayResult(operation: String) {
+    @SuppressLint("SetTextI18n")
+    fun clearInputs() {
         val inp1 = findViewById<EditText>(R.id.inputNumber1)
         val inp2 = findViewById<EditText>(R.id.inputNumber2)
 
+        val res1 = findViewById<TextView>(R.id.textView3)
+        val res2 = findViewById<TextView>(R.id.calcAllResult)
+
+        res1.text = "Result: "
+        res2.text = calcAllPlaceholder
+
+
+
+        inp1.text.clear()
+        inp2.text.clear()
+    }
+
+    fun displayResult(operation: String) {
+
+        val inp1 = findViewById<EditText>(R.id.inputNumber1)
+        val inp2 = findViewById<EditText>(R.id.inputNumber2)
+
+        if (operation == "") return
+
         val res = findViewById<TextView>(R.id.textView3)
 
-        val num1 = inp1.text.toString().toInt()
-        val num2 = inp2.text.toString().toInt()
+        val num1 = inp1.text.toString().toDouble()
+        val num2 = inp2.text.toString().toDouble()
 
-        var sum = 0
+
+        var result = 0.0
 
         when (operation) {
-            "addition" -> sum = num1 + num2
-            "subtraction" -> sum = num1 - num2
-            "multiplication" -> sum = num1 * num2
-            "division" -> sum = num1 / num2
+            "add" -> result = num1 + num2
+            "sub" -> result = num1 - num2
+            "mul" -> result = num1 * num2
+            "div" -> result = num1 / num2
+            "mod" -> result = num1 % num2
         }
 
-        res.text = sum.toString()
+        if (operation == "mod") {
+            res.text = result.toInt().toString()
+        } else {
+            res.text = result.toString()
+        }
 
+    }
+
+
+    fun calculateAll() {
+        val resultTextView = findViewById<TextView>(R.id.calcAllResult)
+        val inp1 = findViewById<EditText>(R.id.inputNumber1).text.toString()
+        val inp2 = findViewById<EditText>(R.id.inputNumber2).text.toString()
+
+        val result =
+            "Sum of $inp1 and $inp2 is: ${inp1.toDouble() + inp2.toDouble()}\n" +
+                    "Difference of $inp1 and $inp2 is: ${inp1.toDouble() - inp2.toDouble()}\n" +
+                    "Quotient of $inp1 and $inp2 is: ${inp1.toDouble() / inp2.toDouble()}\n" +
+                    "Product of $inp1 and $inp2 is: ${inp1.toDouble() * inp2.toDouble()}\n" +
+                    "Modulo of $inp1 and $inp2 is: ${inp1.toInt() % inp2.toInt()}\n"
+
+        resultTextView.text = result
     }
 
 
