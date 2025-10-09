@@ -1,6 +1,7 @@
 package com.markjayson545.mjdc_application
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     val calcAllPlaceholder = "Sum of ___ and ___ is: ___\n" +
             "Difference of ___ and ___ is: ___\n" +
             "Quotient of ___ and ___ is: ___\n" +
-            "Product of ___ and ___ is: ___\n" +
+            "CheckoutProduct of ___ and ___ is: ___\n" +
             "Modulo of ___ and ___ is: ___\n"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,10 +70,14 @@ class MainActivity : AppCompatActivity() {
             calculateAll()
         }
 
-
         findViewById<TextView>(R.id.calcAllResult).text = calcAllPlaceholder
 
+        findViewById<Button>(R.id.logoutBtn).setOnClickListener {
+            finish()
+        }
     }
+
+    private lateinit var nextActivity: Button
 
     @SuppressLint("SetTextI18n")
     fun clearInputs() {
@@ -132,7 +137,7 @@ class MainActivity : AppCompatActivity() {
             "Sum of $inp1 and $inp2 is: ${inp1.toDouble() + inp2.toDouble()}\n" +
                     "Difference of $inp1 and $inp2 is: ${inp1.toDouble() - inp2.toDouble()}\n" +
                     "Quotient of $inp1 and $inp2 is: ${inp1.toDouble() / inp2.toDouble()}\n" +
-                    "Product of $inp1 and $inp2 is: ${inp1.toDouble() * inp2.toDouble()}\n" +
+                    "CheckoutProduct of $inp1 and $inp2 is: ${inp1.toDouble() * inp2.toDouble()}\n" +
                     "Modulo of $inp1 and $inp2 is: ${inp1.toInt() % inp2.toInt()}\n"
 
         resultTextView.text = result

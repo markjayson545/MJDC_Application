@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity">
+
+  <TextView
+      android:id="@+id/userLoggedIn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Welcome, "
+      android:textSize="24sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.053"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.022" />
+
+  <Button
+      android:id="@+id/nxtBtnTwo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Next"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.829"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.679" />
+
+  <Button
+      android:id="@+id/decrementBtn"
+      android:layout_width="57dp"
+      android:layout_height="53dp"
+      android:enabled="false"
+      android:gravity="center"
+      android:text="-"
+      android:textSize="24sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.638"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.435" />
+
+  <Button
+      android:id="@+id/incrementBtn"
+      android:layout_width="57dp"
+      android:layout_height="53dp"
+      android:gravity="center"
+      android:text="+"
+      android:textSize="24sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.966"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.435" />
+
+  <TextView
+      android:id="@+id/priceOne2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="₱100"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.803"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.74" />
+
+  <TextView
+      android:id="@+id/nameTxtView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="PRO 2 LIGHTSPEED "
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.26"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.571" />
+
+  <ImageView
+      android:id="@+id/productImg1"
+      android:layout_width="172dp"
+      android:layout_height="103dp"
+      android:scaleType="centerCrop"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.288"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.259"
+      app:srcCompat="@mipmap/kb2_foreground" />
+
+  <Button
+      android:id="@+id/nxtBtnOne"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Next"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.829"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.269" />
+
+  <CheckBox
+      android:id="@+id/checkBox1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.044"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.286" />
+
+  <TextView
+      android:id="@+id/nameTxtView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="G915 X "
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.194"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.179" />
+
+  <TextView
+      android:id="@+id/descriptionTxtView"
+      android:layout_width="138dp"
+      android:layout_height="101dp"
+      android:text="Logitech G915 X delivers iconic speed, accuracy, and customization with a sleek, ultra-thin design."
+      android:textSize="14sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.263"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.434" />
+
+  <TextView
+      android:id="@+id/priceOne"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="₱100"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.782"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.332" />
+
+  <Button
+      android:id="@+id/decrementBtn2"
+      android:layout_width="57dp"
+      android:layout_height="53dp"
+      android:enabled="false"
+      android:gravity="center"
+      android:text="-"
+      android:textSize="24sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.638"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.874" />
+
+  <TextView
+      android:id="@+id/descriptionTxtView2"
+      android:layout_width="146dp"
+      android:layout_height="118dp"
+      android:text="Designed with pros and engineered to win, the Logitech G PRO 2 LIGHTSPEED wireless mouse is an symmetric, ambidextrous mouse with customizable magnetic side buttons that delivers ultra-fast, precise performance and customizable style for competitive gamers.  "
+      android:textSize="14sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.26"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.933" />
+
+  <Button
+      android:id="@+id/incrementBtn2"
+      android:layout_width="57dp"
+      android:layout_height="53dp"
+      android:gravity="center"
+      android:text="+"
+      android:textSize="24sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.966"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.874" />
+
+  <TextView
+      android:id="@+id/quantity2"
+      android:layout_width="26dp"
+      android:layout_height="31dp"
+      android:gravity="center"
+      android:text="1"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.774"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.861" />
+
+  <TextView
+      android:id="@+id/textView16"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="BREAKTHROUGHS IN PLAY&#xA;"
+      android:textAlignment="center"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.066"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.119" />
+
+  <TextView
+      android:id="@+id/textView10"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="clip_horizontal"
+      android:text="LOGITECH"
+      android:textAlignment="gravity"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.046"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.089" />
+
+  <TextView
+      android:id="@+id/quantity1"
+      android:layout_width="26dp"
+      android:layout_height="31dp"
+      android:gravity="center"
+      android:text="1"
+      android:textSize="16sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.774"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.435" />
+
+  <ImageView
+      android:id="@+id/productImg2"
+      android:layout_width="180dp"
+      android:layout_height="148dp"
+      android:scaleType="centerCrop"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.298"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.746"
+      app:srcCompat="@mipmap/kb2_foreground" />
+
+  <CheckBox
+      android:id="@+id/checkBox2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.044"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.696" />
+
+  <Button
+      android:id="@+id/logoutBtnCart"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Logout"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.95"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.023" />
+
+  <Button
+      android:id="@+id/checkoutBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Checkout"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.962"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.983" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
