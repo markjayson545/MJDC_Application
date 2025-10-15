@@ -49,8 +49,8 @@ class CartActivity : AppCompatActivity() {
     var currentQuantity1 = 1
     var currentQuantity2 = 1
 
-    var currentPrice1 = 100.0
-    var currentPrice2 = 100.0
+    var currentPrice1 = 1500.0
+    var currentPrice2 = 1200.0
 
 
     val product1 = listOf(

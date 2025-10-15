@@ -50,6 +50,6 @@ class CheckoutActivity : AppCompatActivity() {
         val products = intent.getParcelableArrayListExtra<CheckoutProduct>("products")
         var total = 0.0
         products?.forEach { total += it.price * it.quantity }
-        totalTxtView.text = "$${"%.2f".format(total)}"
+        totalTxtView.text = "₱${"%.2f".format(total)}"
     }
 }

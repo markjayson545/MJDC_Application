@@ -37,7 +37,7 @@ class MJDCLoginActivity : AppCompatActivity() {
             if (username.text.toString() == usernameValue && password.text.toString() == "88888") {
                 clearInputs()
                 Toast.makeText(this, "Welcome!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this, CartActivity::class.java)
+                val intent = Intent(this, WebViewActivity::class.java)
                 intent.putExtra("username", usernameValue)
                 startActivity(intent)
             } else {

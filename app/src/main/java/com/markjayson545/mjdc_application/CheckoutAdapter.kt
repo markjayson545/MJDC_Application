@@ -10,7 +10,7 @@ class CheckoutAdapter(private val checkoutProducts: List<CheckoutProduct>) : Rec
             checkoutItem.setProductData(
                 title = checkoutProduct.name,
                 quantity = checkoutProduct.quantity,
-                price = "$${checkoutProduct.price}",
+                price = "₱${checkoutProduct.price}",
                 iconResId = checkoutProduct.imageResId
             )
         }
